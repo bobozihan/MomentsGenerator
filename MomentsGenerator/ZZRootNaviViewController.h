@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZZRootNaviViewController.h
 //  MomentsGenerator
 //
 //  Created by Zark on 2017/9/1.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZZRootNaviViewController : UINavigationController
 
 @end
-

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ZZRootNaviViewController.h"
+#import "ZZMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UIViewController *rootViewController = [[UIViewController alloc] init];
+    rootViewController.title = @"发现";
+    
+    ZZRootNaviViewController *naviViewController = [[ZZRootNaviViewController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = naviViewController;
+    [self.window makeKeyAndVisible];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    ZZMainViewController *mainViewController = [[ZZMainViewController alloc] init];
+
+    [naviViewController pushViewController:mainViewController animated:NO];
+    
     return YES;
 }
 
