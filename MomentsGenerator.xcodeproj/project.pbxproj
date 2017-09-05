@@ -140,6 +140,7 @@
 		58AAE77E1F59665E00D4161F /* IMG_5653.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 58AAE77D1F59665D00D4161F /* IMG_5653.JPG */; };
 		58AAE7821F5ABD6700D4161F /* ZZTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAE7811F5ABD6700D4161F /* ZZTableHeaderView.m */; };
 		58AAE7841F5AC7E700D4161F /* avator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58AAE7831F5AC7E700D4161F /* avator.jpg */; };
+		58AAE7CC1F5E858400D4161F /* AlbumReflashIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58AAE7CB1F5E858400D4161F /* AlbumReflashIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -303,6 +304,7 @@
 		58AAE7801F5ABD6700D4161F /* ZZTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTableHeaderView.h; sourceTree = "<group>"; };
 		58AAE7811F5ABD6700D4161F /* ZZTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTableHeaderView.m; sourceTree = "<group>"; };
 		58AAE7831F5AC7E700D4161F /* avator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avator.jpg; sourceTree = "<group>"; };
+		58AAE7CB1F5E858400D4161F /* AlbumReflashIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumReflashIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,10 +357,7 @@
 			children = (
 				58AAE64E1F59047100D4161F /* AppDelegate.h */,
 				58AAE64F1F59047200D4161F /* AppDelegate.m */,
-				58AAE75F1F594A0700D4161F /* ZZRootNaviViewController.h */,
-				58AAE7601F594A0700D4161F /* ZZRootNaviViewController.m */,
-				58AAE67E1F59056B00D4161F /* ZZMainViewController.h */,
-				58AAE67F1F59056B00D4161F /* ZZMainViewController.m */,
+				58AAE7CD1F5E936C00D4161F /* Controllers */,
 				58AAE77F1F5ABD2800D4161F /* Views */,
 				58AAE6811F59488500D4161F /* Resources */,
 				58AAE6571F59047200D4161F /* Assets.xcassets */,
@@ -405,6 +404,7 @@
 				58AAE6861F5948C300D4161F /* shareMoment@3x.png */,
 				58AAE7721F594EE400D4161F /* AlbumLike@2x.png */,
 				58AAE7731F594EE400D4161F /* AlbumLike@3x.png */,
+				58AAE7CB1F5E858400D4161F /* AlbumReflashIcon@2x.png */,
 				58AAE76E1F594ED600D4161F /* AlbumComment@2x.png */,
 				58AAE76F1F594ED600D4161F /* AlbumComment@3x.png */,
 				58AAE7621F594E4800D4161F /* like_icon@2x.png */,
@@ -549,6 +549,17 @@
 				58AAE7811F5ABD6700D4161F /* ZZTableHeaderView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		58AAE7CD1F5E936C00D4161F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58AAE75F1F594A0700D4161F /* ZZRootNaviViewController.h */,
+				58AAE7601F594A0700D4161F /* ZZRootNaviViewController.m */,
+				58AAE67E1F59056B00D4161F /* ZZMainViewController.h */,
+				58AAE67F1F59056B00D4161F /* ZZMainViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -711,6 +722,7 @@
 				58AAE75D1F59490000D4161F /* Expression_104@2x.png in Resources */,
 				58AAE6FB1F59490000D4161F /* Expression_6@2x.png in Resources */,
 				58AAE7651F594E4800D4161F /* like_icon@3x.png in Resources */,
+				58AAE7CC1F5E858400D4161F /* AlbumReflashIcon@2x.png in Resources */,
 				58AAE7361F59490000D4161F /* Expression_65@2x.png in Resources */,
 				58AAE7351F59490000D4161F /* Expression_64@2x.png in Resources */,
 				58AAE7211F59490000D4161F /* Expression_44@2x.png in Resources */,

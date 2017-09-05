@@ -14,10 +14,13 @@
 @property (nonatomic, strong) UILabel *avatorLabel;
 @end
 
-static CGFloat kAvatorImageViewWidth = 74;
-static CGFloat kAvatorImageViewRightPadding = 15;
-static CGFloat kAvatorImageViewBottomPadding = 20;
-static CGFloat kAvatorImageViewLeftPadding = 20;
+static CGFloat const kAvatorImageViewWidth = 74;
+static CGFloat const kAvatorImageViewRightPadding = 15;
+static CGFloat const kAvatorImageViewBottomPadding = 20;
+//static CGFloat const kAvatorImageViewLeftPadding = 20;
+static CGFloat const kAvatorStrokewidth = 0.5;
+static CGFloat const kAvatorBorder = 3;
+
 
 @implementation ZZTableHeaderView
 
@@ -28,6 +31,25 @@ static CGFloat kAvatorImageViewLeftPadding = 20;
     
     
     return self;
+}
+
+# pragma mark - Private
+
+- (UIImage *)getborderAvaterImage: (UIImage *)image {
+    UIGraphicsBeginImageContextWithOptions(self.avatorImageView.bounds.size, YES, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    // draw border
+    CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetLineWidth(context, kAvatorStrokewidth);
+    CGContextAddRect(context, self.avatorImageView.bounds);
+    CGContextDrawPath(context, kCGPathFillStroke);
+    // draw image
+    CGRect smallRect = CGRectMake(kAvatorBorder, kAvatorBorder, self.avatorImageView.bounds.size.width - 2 * kAvatorBorder, self.avatorImageView.bounds.size.height - 2 *  kAvatorBorder);
+    [image drawInRect:smallRect];
+
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    return newImage;
 }
 
 # pragma mark - Getters & Setters
@@ -64,6 +86,6 @@ static CGFloat kAvatorImageViewLeftPadding = 20;
 
 - (void)setAvatorImage:(UIImage *)avatorImage {
     _avatorImage = avatorImage;
-    self.avatorImageView.image = _avatorImage;
+    self.avatorImageView.image = [self getborderAvaterImage:_avatorImage];
 }
 @end
